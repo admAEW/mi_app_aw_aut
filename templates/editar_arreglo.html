@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Arreglo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+
+    <h1>Editar Arreglo</h1>
+
+    <form method="POST">
+        <div class="mb-3">
+            <label>Descripción</label>
+            <input class="form-control" name="descripcion" value="{{ arreglo.descripcion }}">
+        </div>
+        <div class="mb-3">
+            <label>Fecha</label>
+            <input class="form-control" name="fecha_arreglo" value="{{ arreglo.fecha_arreglo }}">
+        </div>
+        <div class="mb-3">
+            <label>Costo</label>
+            <input class="form-control" name="costo" value="{{ arreglo.costo }}">
+        </div>
+        <div class="mb-3">
+            <label>Lugar</label>
+            <input class="form-control" name="lugar_arreglo" value="{{ arreglo.lugar_arreglo }}">
+        </div>
+        <button class="btn btn-success" type="submit">Guardar cambios</button>
+        <a href="/arreglos/{{ arreglo.id_auto }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+
+</body>
+</html>
